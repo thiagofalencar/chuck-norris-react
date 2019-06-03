@@ -1,0 +1,36 @@
+{
+  "name": "ChuckNorris_React",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thiagofalencar/chuck-norris-react.git",
+  "author": "Thiago Alencar <thiagofalencar@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:css": "node-sass src/ -o src/ ",
+    "watch:css": "npm run build:css && node-sass src/ -o src/ -w -r",
+    "start:js": "react-scripts-ts start",
+    "start": "npm-run-all -p watch:css start:js",
+    "build:js": "react-scripts-ts build",
+    "build": "npm-run-all build:*",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "dependencies": {
+    "@types/enzyme": "^3.9.3",
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.4",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "enzyme": "^3.9.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.5.1"
+  },
+  "devDependencies": {
+    "@types/node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "react-addons-test-utils": "^15.6.2",
+    "react-scripts-ts": "^3.1.0"
+  }
+}
