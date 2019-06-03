@@ -1,0 +1,9 @@
+.sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  right: 10%;
+  top: 10%;
+  box-shadow: 0 0 50px #fff; }

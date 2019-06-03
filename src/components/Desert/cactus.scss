@@ -1,0 +1,51 @@
+.cactus {
+    position: absolute;
+    background: #A06C7A;
+    left: 10%;
+    bottom: 240px;
+    height: 25px;
+    width: 10px;
+    border-radius: 10px 10px 0 0;
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        border-bottom: 5px solid #A06C7A;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        left: -10px;
+        top: -2px;
+        transform: rotateZ(45deg);
+    }
+
+    &::before {
+        left: 0;
+        top: 5px;
+        transform: rotateZ(-45deg);
+    }
+
+    &.model-b {
+        &::after {
+            top: 2px;
+        }
+        &::before {
+            left: 0;
+            top: 0;
+            transform: rotateZ(-45deg);
+        }
+    }
+
+    &.model-c {
+        &::after {
+            top: 0;
+        }
+        &::before {
+            left: 0;
+            top: 6px;
+            transform: rotateZ(-45deg);
+        }
+    }
+}
