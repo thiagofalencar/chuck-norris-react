@@ -1,10 +1,9 @@
 import * as React from 'react';
 import './sun.css';
 
-const Sun = () => {
+export function Sun() {
    return (
       <div className="sun"> </div>
    );
-};
-
+}
 export default Sun;

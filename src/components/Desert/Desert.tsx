@@ -1,41 +1,42 @@
 import * as React from 'react';
-import Sun from "./Sun";
+import {Cactus, ICactus} from "./Cactus";
+import './desert.css';
+import Earth from "./Earth";
 import Layer from "./Layer";
 import {IMountain, Mountain} from "./Mountain";
-import {Cactus, ICactus} from "./Cactus";
-import {Earth} from "./Earth";
-import './desert.css';
-import Sign from "./Sign";
 import Refill from "./Refill";
+import Sign from "./Sign";
+import Sun from "./Sun";
 
-const Desert = () => {
+export function Desert() {
    const mountains = (): Array<any> => {
       const layers = [
          {
-            width: '300px',
-            height: '300px',
             background: 'linear-gradient(to bottom left,#FDDABF,#fbac86)',
+            height: '300px',
             mountains: [
                { bottom: '40px', left: '10%' },
                { bottom: '60px', left: '50%' },
                { bottom: '40px', left: '80%' },
-            ]
+            ],
+            width: '300px',
          },
          {
-            width: '200px',
-            height: '200px',
             background: '#FCB895',
+            height: '200px',
             mountains: [
                { bottom: '40px', left: '15%' },
                { bottom: '60px', left: '40%' },
                { bottom: '40px', left: '60%' },
                { bottom: '80px', left: '80%' },
-            ]
+            ],
+            width: '200px',
          },
       ];
+
       return (
          layers.map((layer, indexLayer: number) => {
-            const { height, width, background, mountains} = layer;
+            const { background, height, mountains, width} = layer;
             return (
                <Layer key={indexLayer} >
                   {
