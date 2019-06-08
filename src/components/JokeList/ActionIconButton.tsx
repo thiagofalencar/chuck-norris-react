@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {IJokeIcon, IJokeItem} from "./JokesItem";
 import './actionIconButton.css';
-import {object} from "prop-types";
 
 export interface IActionButton {
    joke: IJokeItem,
@@ -37,7 +36,8 @@ export class ActionIconButton extends React.Component <IActionButton, object> {
             <img
                src={icon.src}
                alt={title}
-               className={icon.classes.join(' ')} />
+               className={icon.classes.join(' ')}
+            />
          </div>
       )
    }
