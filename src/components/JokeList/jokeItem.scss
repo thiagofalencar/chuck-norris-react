@@ -1,0 +1,39 @@
+@import "../../variables";
+
+.joke-item {
+    display: grid;
+    grid-template-columns: 80px auto 40px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid  $border-card;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #ffffff50;
+    color: #000;
+
+    h2 {
+        text-align: center;
+        font-style: italic;
+        font-size: 18px;
+        padding: 0 12px;
+    }
+
+    img.norris {
+        height: 198px;
+        opacity: 0.8;
+        margin-bottom: -85px;
+    }
+
+    img.icon-favorite {
+        height: 46px;
+        width: 45px;
+        margin: 0;
+
+        &.star {
+            margin: -3px;
+        }
+        &.remove:hover {
+            margin: 3px;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+.jokes-list {
+  border: 3px solid #F975F7;
+  box-shadow: 2px 2px 10px #F975F7;
+  border-radius: 10px 0 10px 10px;
+  min-height: 50vh; }
+
+.jokes-list.no-favorites::before, .jokes-list.no-jokes::before {
+  color: #ff6161;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 5vh;
+  font-style: italic;
+  line-height: 60vh;
+  text-align: center;
+  text-shadow: -2px 3px #af3535;
+  background-blend-mode: hue;
+  background-color: #ffffff60;
+  background-image: url("%PUBLIC_URL%/assets/images/skull.png");
+  background-position-x: 95%;
+  background-position-y: 95%;
+  background-repeat: no-repeat;
+  background-size: 100px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1; }
+
+.jokes-list.no-jokes::before {
+  content: "No jokes survived..."; }
+
+.jokes-list.no-jokes::before.loading {
+  background-position-y: 0; }
+
+.jokes-list.no-favorites::before {
+  content: "No favorites survived..."; }
+
+.jokes-list.loading li {
+  filter: blur(2px); }
+
+.jokes-list.loading::before {
+  content: "Cooking...";
+  text-align: center;
+  line-height: 60vh;
+  font-family: "Roboto Slab", sans-serif;
+  color: #ff7b80;
+  text-shadow: -4px 3px #ce4b50;
+  font-size: 10vh;
+  font-style: italic;
+  background-color: #ffffff60;
+  background-image: url("%PUBLIC_URL%/assets/images/magmaLamp.svg");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position-x: 50%;
+  background-position-y: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }

@@ -1,6 +1,6 @@
+@import 'variables';
+
 body {
-  background: linear-gradient(to bottom, #fbac86, #FEF5E0);
-  position: relative;
-  display: flex;
   min-height: 100vh;
+  font-family: $roboto-slab;
 }

@@ -1,10 +1,12 @@
 import * as React from 'react';
-import './desert.css';
 import Sun from "./Sun";
 import Layer from "./Layer";
 import {IMountain, Mountain} from "./Mountain";
 import {Cactus, ICactus} from "./Cactus";
 import {Earth} from "./Earth";
+import './desert.css';
+import Sign from "./Sign";
+import Refill from "./Refill";
 
 const Desert = () => {
    const mountains = (): Array<any> => {
@@ -54,9 +56,9 @@ const Desert = () => {
    };
    const cactus = () => {
       const params:Array<ICactus> = [
-         { left: '10%', model: 'a', height: '25px' },
-         { left: '50%', model: 'b', height: '30px' },
-         { left: '94%', model: 'c', height: '25px' },
+         { left: '10%', height: '25px' , model: 'a'},
+         { left: '50%', height: '30px' , model: 'b'},
+         { left: '94%', height: '25px' , model: 'c'},
       ];
 
       return (
@@ -67,11 +69,13 @@ const Desert = () => {
    };
 
    return (
-      <div>
+      <div className="desert">
          <Sun />
          { mountains() }
          <Layer >{cactus()}</Layer>
+         <Refill />
          <Earth />
+         <Sign />
       </div>
    );
 };

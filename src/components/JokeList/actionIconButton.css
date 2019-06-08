@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+.action-icon-button {
+  text-align: center;
+  text-decoration: none;
+  color: #F975F7;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 40px;
+  height: 45px; }
+  .action-icon-button span {
+    display: none; }
+  .action-icon-button:before {
+    content: "";
+    height: 40px;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.3em;
+    -webkit-transform: skewX(-45deg) translateX(0);
+    transform: skewX(-45deg) translateX(0);
+    background-color: #ffffff80; }
+  .action-icon-button:hover {
+    background-color: #f4c55f;
+    color: #fff;
+    border-bottom: 4px solid #a70330;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; }
+    .action-icon-button:hover span {
+      margin: -5px;
+      display: block; }
+      .action-icon-button:hover span.favorite {
+        background-color: #ec7799; }
+  .action-icon-button:hover:before {
+    -webkit-transform: skewX(-45deg) translateX(115px);
+    transform: skewX(-45deg) translateX(115px);
+    transition: all 0.5s ease-in-out; }

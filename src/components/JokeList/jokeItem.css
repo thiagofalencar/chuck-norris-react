@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+.joke-item {
+  display: grid;
+  grid-template-columns: 80px auto 40px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #ffffff50;
+  color: #000; }
+
+.joke-item h2 {
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  padding: 0 12px; }
+
+.joke-item img.norris {
+  height: 198px;
+  opacity: 0.8;
+  margin-bottom: -85px; }
+
+.joke-item img.icon-favorite {
+  height: 46px;
+  width: 45px;
+  margin: 0; }
+
+.joke-item img.icon-favorite.star {
+  margin: -3px; }
+
+.joke-item img.icon-favorite.remove:hover {
+  margin: 3px; }

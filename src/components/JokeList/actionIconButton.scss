@@ -1,0 +1,56 @@
+@import "../../variables";
+
+.action-icon-button {
+    text-align: center;
+    text-decoration: none;
+    color:  $border-color;
+    display: inline-block;
+
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    width: 40px;
+    height: 45px;
+
+    span {
+        display: none;
+    }
+
+    &:before {
+        content: "";
+        height: 40px;
+        width: 3em;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4.3em;
+        -webkit-transform: skewX(-45deg) translateX(0);
+        transform: skewX(-45deg) translateX(0);
+        background-color: #ffffff80;
+    }
+
+    &:hover {
+        background-color: #f4c55f;
+        color: $font-color;
+        border-bottom: 4px solid #a70330;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+
+        span {
+            margin: -5px;
+            display: block;
+
+            &.favorite {
+                background-color: #ec7799;
+            }
+        }
+    }
+    &:hover:before {
+        -webkit-transform: skewX(-45deg) translateX(115px);
+        transform: skewX(-45deg) translateX(115px);
+        transition: all 0.5s ease-in-out;
+    }
+}
